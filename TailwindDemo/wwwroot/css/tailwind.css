@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-default-bg: white;
+    --color-default-primary: #000000;
+    --color-default-secondary: #5f42df;
+    --color-default-tertiary: #8b73f7;
+}
+
+.dark {
+    --color-default-bg: #ffffff;
+    --color-default-primary: #000000;
+}
+
+@layer base {
+    body {
+        @apply bg-default-bg overflow-x-hidden;
+    }
+    h1 {
+        @apply font-bold text-5xl font-sans;
+    }
+    h2 {
+        @apply font-semibold text-4xl font-sans;
+    }
+    h3 {
+        @apply font-semibold text-3xl font-sans;
+    }
+}
+
+@layer components {
+    .default-p-x {
+        @apply lg:px-[20%] md:px-36 p-3;
+    }
+    .carousel-slide {
+        @apply default-p-x h-full min-w-full;
+    }
+    .carousel-slide h2 {
+        @apply font-display pb-2 border-b-2 border-default-secondary text-center sm:text-left;
+    }
+}
+
+@layer utilities {
+    .h-slide {
+        height: calc(100vh - 2.5rem);
+    }
+}

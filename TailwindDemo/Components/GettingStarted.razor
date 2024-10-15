@@ -1,0 +1,242 @@
+<!-- New Carousel: Getting Started with Tailwind CSS -->
+<Slide Class="bg-default-bg">
+    <Carousel SlideCount="4">
+        <!-- Slide 1: Title Slide -->
+        <div class="min-w-full h-full flex items-center justify-center bg-default-bg">
+            <div class="text-center text-default-primary px-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6 animate-fade-in">
+                    Getting Started with Tailwind CSS
+                </h1>
+                <p class="text-2xl md:text-3xl font-sans font-light">
+                    A Step-by-Step Guide to Begin Your Tailwind Journey
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Installation Guide -->
+        <div class="min-w-full h-full flex items-center justify-center bg-default-bg">
+            <div class="max-w-4xl text-left text-default-primary px-6">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                    Installation Guide
+                </h2>
+                <!-- Prerequisites -->
+                <div class="mb-8">
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Prerequisites
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Before installing Tailwind CSS, ensure you have the following installed on your system:
+                    </p>
+                    <ul class="list-disc list-inside ml-6 space-y-2 mt-4 text-lg md:text-xl font-sans">
+                        <li><strong>Node.js</strong>: JavaScript runtime environment.</li>
+                        <li><strong>npm</strong>: Node Package Manager (usually installed with Node.js).</li>
+                    </ul>
+                </div>
+                <!-- Step-by-Step Setup -->
+                <div>
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Step-by-Step Setup
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Follow these steps to install Tailwind CSS via npm and configure it with PostCSS:
+                    </p>
+                    <ol class="list-decimal list-inside ml-6 space-y-2 mt-4 text-lg md:text-xl font-sans">
+                        <li>
+                            <strong>Initialize npm:</strong> In your project directory, run:
+                            <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npm init -y
+</code>
+                            </pre>
+                        </li>
+                        <li>
+                            <strong>Install Tailwind CSS:</strong> Run:
+                            <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npm install tailwindcss postcss autoprefixer
+</code>
+                            </pre>
+                        </li>
+                        <li>
+                            <strong>Create Configuration Files:</strong> Generate <code>tailwind.config.js</code> and <code>postcss.config.js</code>:
+                            <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npx tailwindcss init -p
+</code>
+                            </pre>
+                        </li>
+                        <li>
+                            <strong>Configure Tailwind:</strong> Set up your template paths and customize your theme in <code>tailwind.config.js</code>.
+                        </li>
+                        <li>
+                            <strong>Include Tailwind in Your CSS:</strong> Create a CSS file (e.g., <code>src/styles.css</code>) and add:
+                            <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-css">&commat;tailwind base;
+&commat;tailwind components;
+&commat;tailwind utilities;
+</code>
+                            </pre>
+                        </li>
+                        <li>
+                            <strong>Build Your CSS:</strong> Run the Tailwind CLI to compile your CSS:
+                            <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch
+</code>
+                            </pre>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Integrating with Build Tools -->
+        <div class="min-w-full h-full flex items-center justify-center bg-default-bg">
+            <div class="max-w-4xl text-left text-default-primary px-6">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                    Integrating with Build Tools
+                </h2>
+                <p class="text-xl md:text-2xl font-sans mb-4">
+                    Tailwind CSS can be integrated with various build tools to streamline your development workflow.
+                </p>
+                <ul class="space-y-6 text-lg md:text-xl font-sans">
+                    <!-- Webpack -->
+                    <li>
+                        <h3 class="text-2xl font-semibold font-display mb-2">
+                            Webpack
+                        </h3>
+                        <p>
+                            Use <code>postcss-loader</code> to process Tailwind CSS with Webpack:
+                        </p>
+                        <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-js">
+// webpack.config.js
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ],
+      },
+      // ...
+    ],
+  },
+  // ...
+};
+</code>
+                        </pre>
+                    </li>
+                    <!-- Gulp -->
+                    <li>
+                        <h3 class="text-2xl font-semibold font-display mb-2 mt-8">
+                            Gulp
+                        </h3>
+                        <p>
+                            Set up Gulp to process Tailwind CSS using <code>gulp-postcss</code>:
+                        </p>
+                        <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-js">
+// gulpfile.js
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+
+gulp.task('css', function () {
+  return gulp.src('src/styles.css')
+    .pipe(postcss([
+      require('tailwindcss'),
+      require('autoprefixer'),
+    ]))
+    .pipe(gulp.dest('dist/'));
+});
+</code>
+                        </pre>
+                    </li>
+                    <!-- Other Build Systems -->
+                    <li>
+                        <h3 class="text-2xl font-semibold font-display mb-2 mt-8">
+                            Other Build Systems
+                        </h3>
+                        <p>
+                            Tailwind CSS can be integrated with other build tools like Grunt, Parcel, and more. Refer to the official documentation for specific setup instructions.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: Development Workflow and Resources -->
+        <div class="min-w-full h-full flex items-center justify-center bg-default-bg">
+            <div class="max-w-5xl text-left text-default-primary px-6">
+                <!-- Development Workflow -->
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                    Development Workflow
+                </h2>
+                <!-- Utility-First Styling -->
+                <div class="mb-10">
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Utility-First Styling
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Embrace Tailwind's utility-first approach by:
+                    </p>
+                    <ul class="list-disc list-inside ml-6 space-y-2 mt-4 text-lg md:text-xl font-sans">
+                        <li><strong>Writing Maintainable Code:</strong> Keep your HTML clean by using meaningful class names and extracting components when necessary.</li>
+                        <li><strong>Creating Reusable Components:</strong> Use partials or components in your templating engine to avoid repetition.</li>
+                    </ul>
+                </div>
+                <!-- Using Tailwind with Templates -->
+                <div class="mb-10">
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Using Tailwind with Templates
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Incorporate Tailwind CSS into Razor views or other templating engines:
+                    </p>
+                    <ul class="list-disc list-inside ml-6 space-y-2 mt-4 text-lg md:text-xl font-sans">
+                        <li><strong>Razor Views:</strong> Use Tailwind classes directly in your Razor components (.razor files).</li>
+                        <li><strong>Other Templating Engines:</strong> Apply Tailwind classes in your HTML templates for React, Vue, Angular, etc.</li>
+                        <li><strong>IntelliSense Support:</strong> Utilize editor extensions that provide class name auto-completion for Tailwind.</li>
+                    </ul>
+                </div>
+                <!-- Resources and Support -->
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 mt-12">
+                    Resources and Support
+                </h2>
+                <!-- Official Documentation -->
+                <div class="mb-8">
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Official Documentation
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Access comprehensive guides and examples at:
+                    </p>
+                    <p class="text-xl md:text-2xl font-sans mt-4">
+                        <a href="https://tailwindcss.com/docs" class="text-default-secondary underline">
+                            tailwindcss.com/docs
+                        </a>
+                    </p>
+                </div>
+                <!-- Community Resources -->
+                <div>
+                    <h3 class="text-3xl font-semibold font-display mb-4">
+                        Community Resources
+                    </h3>
+                    <p class="text-xl md:text-2xl font-sans">
+                        Explore tutorials, forums, and plugins created by the Tailwind community:
+                    </p>
+                    <ul class="list-disc list-inside ml-6 space-y-2 mt-4 text-lg md:text-xl font-sans">
+                        <li><strong>Tailwind UI:</strong> Pre-built components and templates.</li>
+                        <li><strong>Heroicons:</strong> Free SVG icons by the makers of Tailwind CSS.</li>
+                        <li><strong>Reddit &amp; Stack Overflow:</strong> Join discussions and seek help from fellow developers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Carousel>
+</Slide>

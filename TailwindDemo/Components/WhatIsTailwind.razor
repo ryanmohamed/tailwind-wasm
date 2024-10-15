@@ -1,0 +1,361 @@
+@using TailwindDemo.Components
+
+<!-- Enhanced Carousel: What is Tailwind CSS? -->
+<Slide Class="h-full w-full overflow-hidden">
+    <Carousel SlideCount="6">
+        <!-- Slide 1: Title Slide -->
+        <div
+            class="carousel-slide relative flex items-center justify-center bg-default-primary text-default-bg overflow-hidden">
+            <!-- Large Faint Text Background -->
+            <div class="absolute inset-0 flex items-center justify-center ">
+                <h1 class="text-9xl font-extrabold text-blue-300 opacity-10 text-center">
+                    Tailwind CSS
+                </h1>
+            </div>
+            <!-- Main Content -->
+            <div class="relative text-center px-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
+                    What is Tailwind CSS?
+                </h1>
+                <p class="text-lg font-sans font-light">
+                    An In-depth Look at the Utility-First CSS Framework
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Definition -->
+        <div
+            class="carousel-slide flex flex-col items-center justify-center relative bg-gradient-to-bl from-default-secondary to-default-tertiary text-default-bg">
+            <!-- Text Content -->
+            <div class="text-left">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                    Definition
+                </h2>
+                <p>
+                    <strong>Tailwind CSS</strong> is a <em>utility-first CSS framework</em> for rapidly building custom
+                    user interfaces. Unlike traditional CSS frameworks that provide pre-designed components, Tailwind
+                    provides low-level utility classes that let you build completely custom designs without ever leaving
+                    your HTML.
+                </p>
+            </div>
+            <!-- Code Mockup -->
+            <div class="mt-8 w-full">
+                <div class="relative w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Editor Header -->
+                    <div class="absolute top-0 left-0 w-full bg-gray-900 h-8 flex items-center px-4">
+                        <div class="h-2 w-2 rounded-full bg-red-500 mr-2"></div>
+                        <div class="h-2 w-2 rounded-full bg-yellow-500 mr-2"></div>
+                        <div class="h-2 w-2 rounded-full bg-green-500"></div>
+                    </div>
+                    <!-- Code Content -->
+                    <pre class="mt-8 p-4 text-sm text-green-400 font-mono whitespace-pre-line">
+<code class="language-html">
+    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+        &MediumSpace;&MediumSpace;&MediumSpace;<span class="text-white">Click Me</span>
+    &lt;/button&gt;
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Click Me
+            </button>
+        </div>
+
+        
+
+        <!-- Slide 3: Core Philosophy -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
+                Core Philosophy
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center bg-default-secondary rounded-lg shadow-lg p-6">
+                    <div class="text-default-tertiary mb-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h8v2H4v-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-center text-xl font-semibold mb-2 text-default-bg">Speed and Efficiency</h3>
+                    <p class="text-center text-default-bg">
+                        Build custom designs quickly without writing custom CSS.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center bg-default-tertiary rounded-lg shadow-lg p-6">
+                    <div class="text-default-secondary mb-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8 -3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-3.31 2.69-6 6-6 3.31 0 6 2.69 6 6C16 13.31 13.31 16 10 16z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-center text-xl font-semibold mb-2 text-default-bg">Consistency</h3>
+                    <p class="text-center text-default-bg">
+                        Use a standardized set of design tokens across your project.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center bg-default-secondary rounded-lg shadow-lg p-6">
+                    <div class="text-default-tertiary mb-4">
+                        <!-- Icon -->
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 7h14v2H3V7zm0 4h10v2H3v-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-center text-xl font-semibold mb-2 text-default-bg">Flexibility</h3>
+                    <p class="text-center text-default-bg">
+                        Compose utility classes to create unique designs without constraints.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Key Features -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-primary text-default-bg">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10">
+                Key Features
+            </h2>
+            <div class="space-y-12">
+                <!-- Feature 1 -->
+                <div class="flex flex-col gap-8 sm:flex-row items-center">
+                    <!-- Illustration -->
+                    <div class="sm:w-1/3 mb-6 sm:mb-0 shadow-default-primary shadow-md">
+                        <!-- Placeholder Image -->
+                        <div class="rounded-lg overflow-hidden w-full h-48 bg-default-secondary flex items-center justify-center">
+                            <img class="w-full h-auto" src="https://files.oaiusercontent.com/file-PjZT4biJeTHEhdV9l2V6c1dq?se=2024-10-15T02%3A39%3A58Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df5bff4be-2465-4da3-9e33-67965551eb03.webp&sig=iTKD1mv7g/ynUAubOIBwRNxzx9TCjnOhCv78%2BF0bruM%3D" />
+                        </div>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="sm:w-2/3">
+                        <h3 class="text-xl font-semibold font-display mb-4">
+                            Highly Customizable
+                        </h3>
+                        <p>
+                            Tailwind is designed to be customized. With its configuration file, you can:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Define your own color palette, fonts, and spacing scale.</li>
+                            <li>Extend or override the default utility classes.</li>
+                            <li>Create custom utilities with ease.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex gap-8 flex-col sm:flex-row sm:items-center w-full">
+                    <!-- Text Content -->
+                    <div class="sm:w-2/3">
+                        <h3 class="text-xl font-semibold font-display mb-4">
+                            Low-level Utility Classes
+                        </h3>
+                        <p>
+                            Tailwind provides an extensive set of utility classes for:
+                        </p>
+                        <ul class="list-disc list-inside my-4 space-y-2">
+                            <li>Layout (flexbox, grid)</li>
+                            <li>Spacing (margin, padding)</li>
+                            <li>Typography (font size, weight, line-height)</li>
+                            <li>Colors (background, text, borders)</li>
+                            <li>And much more...</li>
+                        </ul>
+                        <p>
+                            These utilities enable you to build any design directly in your HTML.
+                        </p>
+                    </div>
+                    <!-- Illustration -->
+                    <div class="sm:w-1/3 mb-6 sm:mb-0 hidden sm:block">
+                        <!-- Placeholder Image -->
+                        <div class="relative w-full aspect-square bg-default-secondary rounded-xl overflow-hidden flex items-center justify-center">
+                            <img class="object-fit w-full h-auto" src="https://files.oaiusercontent.com/file-7AFEnmpLGqQjbIZwucaZRbFd?se=2024-10-15T02%3A47%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6d73f480-00d4-4d3f-90ac-17cbc8909ca0.webp&sig=hAPDMf/i2NDk0mXnPtul2kLIsvSIZc1SXoXGoJpun%2BY%3D" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4b: Key Features -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-primary text-default-bg">
+            <div class="w-full h-full flex flex-col gap-4 justify-center">
+                <div>
+                    <h4>Width utilities</h4>
+                    <div class="flex flex-row gap-2 items-end mt-2">
+                        <div class="w-48 bg-default-secondary flex flex-col items-center justify-center">
+                            <p>w-48</p>
+                        </div>
+                        <div class="w-36 bg-default-tertiary flex flex-col items-center justify-center">
+                            <p>w-36</p>
+                        </div>
+                        <div class="w-32 bg-default-secondary flex flex-col items-center justify-center">
+                            <p>w-32</p>
+                        </div>
+                        <div class="w-24 bg-default-tertiary flex flex-col items-center justify-center">
+                            <p>w-24</p>
+                        </div>
+                        <div class="w-20 bg-default-secondary flex flex-col items-center justify-center">
+                            <p>w-20</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Colors</h4>
+                    <div class="flex h-32 w-full mt-2">
+                        <div class="bg-blue-100 flex-grow"></div>
+                        <div class="bg-blue-200 flex-grow"></div>
+                        <div class="bg-blue-300 flex-grow"></div>
+                        <div class="bg-blue-400 flex-grow"></div>
+                        <div class="bg-blue-500 flex-grow"></div>
+                        <div class="bg-blue-600 flex-grow"></div>
+                        <div class="bg-blue-700 flex-grow"></div>
+                        <div class="bg-blue-800 flex-grow"></div>
+                        <div class="bg-blue-900 flex-grow"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Typography</h4>
+                    <div class="mt-2">
+                        <pre class="text-xs"><code>&lt;p class="text-xs"&gt;Tailwind&lt;/p&gt;</code></pre>
+                        <pre ><code class="text-sm">&lt;p class="text-sm"&gt;is&lt;/p&gt;</code></pre>
+                        <pre ><code class="text-base">&lt;p class="text-base"&gt;pretty&lt;/p&gt;</code></pre>
+                        <pre ><code class="text-lg">&lt;p class="text-lg"&gt;freaking&lt;/p&gt;</code></pre>
+                        <pre ><code class="text-xl">&lt;p class="text-xl"&gt;cool&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Layout</h4>
+                    <div class="w-full h-32 grid grid-cols-4 grid-rows-3 mt-2">
+                        <div class="text-center grid place-items-center p-2 col-span-1 row-span-4 bg-emerald-700">
+                            <p>col-span-1 row-span-4</p>
+                        </div>
+                        <div class="text-center grid place-items-center p-2 col-start-2 row-start-1 col-span-3 row-span-1 bg-emerald-600">
+                            <p>col-start-2 row-start-1 col-span-3 row-span-1</p>
+                        </div>
+                        <div class="text-center grid place-items-center p-2 col-start-2 row-start-2 col-span-3 row-span-2 bg-emerald-900">
+                            <p>col-start-2 row-start-2 col-span-3 row-span-3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Spacing</h4>
+                    <div class="flex flex-row mt-2 h-32 gap-3 w-full">
+                        <div class="grid place-items-center bg-red-700 rounded-md aspect-square px-1">px-1</div>
+                        <div class="grid place-items-center bg-yellow-700 rounded-md aspect-square px-2">px-2</div>
+                        <div class="grid place-items-center bg-orange-700 rounded-md aspect-square px-3">px-3</div>
+                        <div class="grid place-items-center bg-green-700 rounded-md aspect-square px-4">px-4</div>
+                        <div class="grid place-items-center bg-emerald-700 rounded-md aspect-square px-5">px-5</div>
+                        <div class="grid place-items-center bg-sky-700 rounded-md aspect-square px-6">px-6</div>
+                        <div class="grid place-items-center bg-blue-700 rounded-md aspect-square px-10">px-10</div>
+                        <div class="grid place-items-center bg-purple-700 rounded-md aspect-square px-20">px-20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Key Features -->
+        <div class="carousel-slide flex flex-col gap-10 sm:items-center justify-center bg-default-primary text-default-bg">
+           <h2 class="text-4xl md:text-5xl font-bold font-display mb-10">
+                Key Features (cont.)
+            </h2>
+            <!-- Feature 3 -->
+            <div class="flex flex-col sm:flex-row items-center w-full text-right">
+                <!-- Illustration -->
+                <div class="sm:w-1/3 mb-6 sm:mb-0 hidden sm:block">
+                    <!-- Placeholder Image -->
+                    <div class="relative w-full aspect-square bg-default-secondary rounded-xl overflow-hidden flex items-center justify-center">
+                        <img class="" src="/imgs/response.png" />
+                    </div>
+                </div>
+                <!-- Text Content -->
+                <div class="sm:w-2/3 sm:pl-8">
+                    <h3 class="text-xl font-semibold font-display mb-4">
+                        Responsive Design Utilities
+                    </h3>
+                    <p>
+                        Tailwind makes it easy to build responsive designs with mobile-first utility classes. You can
+                        apply styles at different breakpoints using prefixes:
+                    </p>
+                    <ul class="list-disc list-inside my-4 space-y-2">
+                        <li><code>sm:</code> for small screens (min-width: 640px)</li>
+                        <li><code>md:</code> for medium screens (min-width: 768px)</li>
+                        <li><code>lg:</code> for large screens (min-width: 1024px)</li>
+                        <li><code>xl:</code> for extra-large screens (min-width: 1280px)</li>
+                        <li><code>2xl:</code> for double extra-large screens (min-width: 1536px)</li>
+                    </ul>
+                    <p class="font-sans">
+                        This approach allows for fine-grained control over your design across different devices.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Ecosystem and Community -->
+        <div
+            class="carousel-slide flex flex-col items-center justify-center bg-default-secondary text-white px-6 py-10">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                Ecosystem and Community
+            </h2>
+            <div class="max-w-5xl">
+                <p class="text-xl md:text-2xl font-sans mb-8 text-center">
+                    Tailwind CSS has a vibrant and growing ecosystem, which includes:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <!-- Growing Popularity -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-white mb-4">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0L1 20h18L10 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Growing Popularity</h3>
+                        <p class="text-lg font-sans">
+                            Adopted by developers worldwide for its efficiency and flexibility.
+                        </p>
+                    </div>
+                    <!-- Extensive Plugin Support -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-white mb-4">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 1l9 9-9 9-9-9 9-9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Extensive Plugin Support</h3>
+                        <p class="text-lg font-sans mb-4">
+                            A rich collection of official and third-party plugins to extend Tailwind's functionality.
+                        </p>
+                        <ul class="text-left list-disc list-inside space-y-2">
+                            <li><code>&commat;tailwindcss/typography</code> for beautiful prose styling</li>
+                            <li><code>&commat;tailwindcss/forms</code> for form element resets</li>
+                            <li><code>&commat;tailwindcss/aspect-ratio</code> for controlling element ratios</li>
+                        </ul>
+                    </div>
+                    <!-- Community Resources -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-white mb-4">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 2h16v16H2V2zm2 2v12h12V4H4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Community Resources</h3>
+                        <p class="text-lg font-sans">
+                            Access to templates, components, and tutorials created by the community.
+                        </p>
+                    </div>
+                </div>
+                <p class="text-xl md:text-2xl font-sans mt-8 text-center">
+                    This strong ecosystem makes it easier to build complex and modern user interfaces efficiently.
+                </p>
+            </div>
+        </div>
+
+        @* todo: insert example component and highlight classes *@
+    </Carousel>
+</Slide>

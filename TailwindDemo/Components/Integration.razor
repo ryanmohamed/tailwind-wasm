@@ -1,0 +1,244 @@
+<!-- Enhanced Carousel: Integrating Tailwind with the .NET Stack -->
+<Slide Class="h-full w-full overflow-hidden">
+    <Carousel SlideCount="4">
+        <!-- Slide 1: Title Slide -->
+        <div class="carousel-slide relative flex items-center justify-center bg-default-secondary overflow-hidden">
+            <!-- Large Faint Text Background -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <h1 class="text-9xl font-extrabold text-white opacity-10">
+                    Tailwind & .NET
+                </h1>
+            </div>
+            <!-- Main Content -->
+            <div class="relative text-center text-white">
+                <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
+                    Integrating Tailwind with the .NET Stack
+                </h1>
+                <p class="text-2xl md:text-3xl font-sans font-light">
+                    Seamless Integration for Modern Web Development
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Seamless Integration -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
+                Seamless Integration
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
+                <!-- Setup with ASP.NET Core -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">🔧</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Setup with ASP.NET Core
+                    </h2>
+                    <p class="text-center">
+                        Tailwind CSS can be easily integrated into ASP.NET Core projects by leveraging npm and build tools. Steps include:
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
+                        <li><strong>Initialize npm:</strong> Set up npm in your project directory.</li>
+                        <li><strong>Install Tailwind CSS:</strong> Use npm to install Tailwind and its dependencies.</li>
+                        <li><strong>Configure Build Tools:</strong> Set up PostCSS and integrate it with your build process.</li>
+                    </ul>
+                </div>
+                <!-- Tooling Support -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">🛠️</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Tooling Support
+                    </h2>
+                    <p class="text-center">
+                        Tailwind CSS is compatible with popular editors and IDEs, providing features like:
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
+                        <li><strong>IntelliSense:</strong> Autocomplete for class names in Visual Studio and Visual Studio Code.</li>
+                        <li><strong>Syntax Highlighting:</strong> Improved readability of markup with Tailwind classes.</li>
+                        <li><strong>Live Reloading:</strong> See changes in real-time during development.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Workflow Integration -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
+                Workflow Integration
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
+                <!-- Tailwind CSS Integration -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">🔄</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Tailwind CSS Integration
+                    </h2>
+                    <p class="text-center">
+                        Incorporate Tailwind into existing .NET projects without major overhauls:
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
+                        <li><strong>Minimal Changes:</strong> Integrate Tailwind into your build process with minimal adjustments to your existing setup.</li>
+                        <li><strong>Asset Pipeline:</strong> Use tools like Gulp, Grunt, or npm scripts to automate CSS compilation.</li>
+                        <li><strong>Razor Views Compatibility:</strong> Apply Tailwind classes directly in your Razor components or views.</li>
+                    </ul>
+                    <p class="mt-6 text-center">
+                        This seamless integration allows you to enhance your application's styling without disrupting your development workflow.
+                    </p>
+                </div>
+                <!-- Bootstrap Workflow -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">⚙️</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Bootstrap Workflow
+                    </h2>
+                    <p class="text-center">
+                        May require overriding styles for customization:
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
+                        <li>Relies on predefined classes for components and layouts.</li>
+                        <li>Customizing components often involves writing additional CSS to override defaults.</li>
+                        <li>Can lead to more complex stylesheets and potential specificity issues.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Example Setup -->
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
+                Example Setup
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
+                <!-- Installation Steps -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">📦</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Installation Steps
+                    </h2>
+                    <!-- Installing Tailwind via npm -->
+                    <h2 class="text-2xl font-semibold font-display mb-2">
+                        Installing Tailwind via npm
+                    </h2>
+                    <p class="text-center">
+                        In your ASP.NET Core project directory, run:
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npm init -y
+npm install tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+</code>
+                    </pre>
+
+                    <!-- Configuring PostCSS -->
+                    <h2 class="text-2xl font-semibold font-display mb-2 mt-6">
+                        Configuring PostCSS
+                    </h2>
+                    <p class="text-center">
+                        Update your <code>postcss.config.js</code> file:
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-js">
+// postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+</code>
+                    </pre>
+
+                    <!-- Building and Compiling CSS -->
+                    <h2 class="text-2xl font-semibold font-display mb-2 mt-6">
+                        Building and Compiling CSS
+                    </h2>
+                    <p class="text-center">
+                        Add the Tailwind directives to your CSS file (e.g., <code>wwwroot/css/site.css</code>):
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-css">
+&commat;tailwind base;
+&commat; components;
+&commat; utilities;
+</code>
+                    </pre>
+                    <p class="text-center mt-4">
+                        Then, build your CSS by running:
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-bash">
+npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --watch
+</code>
+                    </pre>
+
+                    <!-- Automating with Build Scripts -->
+                    <h2 class="text-2xl font-semibold font-display mb-2 mt-6">
+                        Automating with Build Scripts
+                    </h2>
+                    <p class="text-center">
+                        Add a script to your <code>package.json</code> to automate the build process:
+                    </p>
+                    <pre class="bg-gray-100 p-4 rounded-lg mt-2 overflow-auto text-sm md:text-base">
+<code class="language-json">
+"scripts": {
+  "build:css": "tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css",
+  "watch:css": "tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --watch"
+}
+</code>
+                    </pre>
+                    <p class="text-center mt-4">
+                        Now, you can run <code>npm run watch:css</code> during development to automatically compile your CSS when changes are made.
+                    </p>
+                </div>
+                <!-- Visual Content -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon or Illustration -->
+                    <div class="mb-4">
+                        <!-- Placeholder for illustration -->
+                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                            <span class="text-white text-3xl">💻</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                        Visual Setup
+                    </h2>
+                    <p class="text-center">
+                        Here's how the integration looks within your project structure:
+                    </p>
+                    <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center mt-4">
+                        <span class="text-default-secondary text-2xl">Project Structure Diagram</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Carousel>
+</Slide>

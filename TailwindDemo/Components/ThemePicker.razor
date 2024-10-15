@@ -1,0 +1,26 @@
+@inject IJSRuntime JSRuntime
+
+<h3>Select Theme</h3>
+
+<select @onchange="ChangeTheme">
+    <option value="default">Default</option>
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+</select>
+
+<button @onclick=@(() => SetTheme("default"))>Set Default Theme</button>
+<button @onclick=@(() => SetTheme("dark"))>Set Dark Theme</button>
+<button @onclick=@(() => SetTheme("light"))>Set Light Theme</button>
+
+@code {
+    private async Task ChangeTheme(ChangeEventArgs e)
+    {
+        var themeName = e.Value?.ToString() ?? "default";
+        await SetTheme(themeName);
+    }
+
+    private async Task SetTheme(string themeName)
+    {
+        await JSRuntime.InvokeVoidAsync("applyTheme", themeName);
+    }
+}
