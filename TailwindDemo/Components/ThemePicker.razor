@@ -1,16 +1,31 @@
 @inject IJSRuntime JSRuntime
 
-<h3>Select Theme</h3>
-
-<select @onchange="ChangeTheme">
-    <option value="default">Default</option>
-    <option value="dark">Dark</option>
-    <option value="light">Light</option>
-</select>
-
-<button @onclick=@(() => SetTheme("default"))>Set Default Theme</button>
-<button @onclick=@(() => SetTheme("dark"))>Set Dark Theme</button>
-<button @onclick=@(() => SetTheme("light"))>Set Light Theme</button>
+<div class="z-[100] flex items-center justify-center gap-4 flex-wrap z-100">
+    <button class="shadow-default-primary shadow-lg hover:scale-125 duration-200 p-1 grid grid-cols-2 grid-rows-2 h-16 w-16 bg-white col-span-1 row-span-1" @onclick=@(() => SetTheme("default"))>
+        <div class="bg-white w-full h-full"></div>
+        <div class="bg-black w-full h-full"></div>
+        <div class="bg-[#5f42df] w-full h-full"></div>
+        <div class="bg-[#8b73f7] w-full h-full"></div>
+    </button>
+    <button class="shadow-default-primary shadow-lg  hover:scale-125 duration-200 p-1 grid grid-cols-2 grid-rows-2 h-16 w-16 bg-white col-span-1 row-span-1" @onclick=@(() => SetTheme("theme1"))>
+        <div class="bg-white w-full h-full"></div>
+        <div class="bg-black w-full h-full"></div>
+        <div class="bg-[#5f42df] w-full h-full"></div>
+        <div class="bg-[#8b73f7] w-full h-full"></div>
+    </button>
+    <button class="shadow-default-primary shadow-lg hover:scale-125 duration-200 p-1 grid grid-cols-2 grid-rows-2 h-16 w-16 bg-white col-span-1 row-span-1" @onclick=@(() => SetTheme("theme2"))>
+        <div class="bg-white w-full h-full"></div>
+        <div class="bg-black w-full h-full"></div>
+        <div class="bg-[#5f42df] w-full h-full"></div>
+        <div class="bg-[#8b73f7] w-full h-full"></div>
+    </button>
+    <button class="shadow-default-primary shadow-lg hover:scale-125 duration-200 p-1 grid grid-cols-2 grid-rows-2 h-16 w-16 bg-white col-span-1 row-span-1" @onclick=@(() => SetTheme("theme3"))>
+        <div class="bg-white w-full h-full"></div>
+        <div class="bg-black w-full h-full"></div>
+        <div class="bg-[#5f42df] w-full h-full"></div>
+        <div class="bg-[#8b73f7] w-full h-full"></div>
+    </button>
+</div>
 
 @code {
     private async Task ChangeTheme(ChangeEventArgs e)

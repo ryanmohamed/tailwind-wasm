@@ -1,7 +1,7 @@
 @using TailwindDemo.Components
 
 <!-- Enhanced Carousel: What is Tailwind CSS? -->
-<Slide Class="h-full w-full overflow-hidden">
+<Slide Title="tailwind" Class="h-full w-full overflow-hidden">
     <Carousel SlideCount="6">
         <!-- Slide 1: Title Slide -->
         <div
@@ -13,14 +13,30 @@
                 </h1>
             </div>
             <!-- Main Content -->
-            <div class="relative text-center px-6">
-                <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
-                    What is Tailwind CSS?
-                </h1>
-                <p class="text-lg font-sans font-light">
-                    An In-depth Look at the Utility-First CSS Framework
-                </p>
+            <div class="flex flex-col gap-4">
+                <div class="relative text-center px-6">
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
+                        What is Tailwind CSS?
+                    </h1>
+                    <p class="text-lg font-sans font-light">
+                        An In-depth Look at the Utility-First CSS Framework
+                    </p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4 z-10">
+                    <div class="flex gap-4 flex-col md:flex-row">
+                        <div class="sm:w-1/2 h-64 overflow-hidden relative">
+                            <img class="object-cover w-full" src="https://images.unsplash.com/photo-1726507448744-acc4df95fbdd?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" >
+                        </div>
+                        <div class="md:w-1/2">
+                        <h2 class="text-gray-900 text-lg font-bold mb-2">Product Name</h2>
+                        <p class="text-sm text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="text-sm text-gray-600">Price: $432.99</p>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <!-- Slide 2: Definition -->
@@ -49,8 +65,7 @@
                     </div>
                     <!-- Code Content -->
                     <pre class="mt-8 p-4 text-sm text-green-400 font-mono whitespace-pre-line">
-<code class="language-html">
-    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+<code>&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
         &MediumSpace;&MediumSpace;&MediumSpace;<span class="text-white">Click Me</span>
     &lt;/button&gt;
 </code>

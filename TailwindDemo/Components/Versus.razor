@@ -1,5 +1,5 @@
 <!-- Enhanced Carousel: Tailwind CSS vs. Traditional Frameworks -->
-<Slide Class="h-full w-full overflow-hidden">
+<Slide Title="versus" Class="h-full w-full overflow-hidden">
     <Carousel SlideCount="5">
         <!-- Slide 1: Title Slide -->
         <div class="carousel-slide relative flex items-center justify-center bg-default-secondary overflow-hidden">
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Slide 2: Bootstrap Overview -->
-        <div class="carousel-slide flex flex-col sm:flex-row items-center justify-center bg-default-bg">
+        <div class="carousel-slide gap-4 flex flex-col sm:flex-row items-center justify-center bg-default-bg">
             <!-- Text Content -->
             <div class="sm:w-1/2 text-left text-default-primary">
                 <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
@@ -45,17 +45,34 @@
                 </p>
             </div>
             <!-- Visual Content -->
-            <div class="sm:w-1/2 mt-8 sm:mt-0 sm:ml-8">
-                <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <span class="text-default-secondary text-2xl">Bootstrap Components</span>
+            <div class="w-full sm:w-1/2 flex-grow flex flex-col items-center justify-center gap-4">
+                <div class="card" style="width: 100%;">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="w-full max-h-32 sm:max-h-64 bg-gray-800 overflow-scroll rounded-md">
+                    <pre class="w-full p-4 text-sm text-green-400 font-mono">
+                        <code>&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
                 </div>
             </div>
         </div>
 
         <!-- Slide 3: Tailwind's Utility-First Approach -->
-        <div class="carousel-slide flex flex-col sm:flex-row items-center justify-center bg-default-bg">
+        <div class="carousel-slide flex flex-col gap-8 sm:flex-row items-center justify-center bg-default-bg">
             <!-- Text Content -->
-            <div class="sm:w-1/2 text-left text-default-primary">
+            <div class="w-full sm:w-1/2 text-left text-default-primary">
                 <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
                     Tailwind’s Utility-First Approach
                 </h2>
@@ -73,16 +90,49 @@
                 </p>
             </div>
             <!-- Visual Content -->
-            <div class="sm:w-1/2 mt-8 sm:mt-0 sm:ml-8">
-                <div class="w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                    <pre class="p-4 text-sm text-green-400 font-mono">
-&lt;div class="text-center"&gt;
-    &lt;p class="text-blue-500 font-bold"&gt;
-        Tailwind makes styling easy!
-    &lt;/p&gt;
-&lt;/div&gt;
-                    </pre>
+            <div class="flex flex-col gap-4 w-full sm:w-1/2">
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <div class="flex items-center">
+                        <div class="h-12 w-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                        <img src="https://dummyimage.com/50x50/ddd/000" alt="Profile Picture" class="h-8 w-8 rounded-full">
+                        </div>
+                        <div>
+                        <h4 class="text-lg font-bold">John Doe</h4>
+                        <p class="text-sm text-gray-600">CEO</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-700">Email: john.doe@example.com</p>
+                        <p class="text-sm text-gray-700">Phone: +1 234 567 890</p>
+                    </div>
+                    <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full mt-4">
+                        View Details
+                    </button>
                 </div>
+
+                <div class="w-full max-h-32 sm:max-h-64 bg-gray-800 overflow-scroll rounded-md">
+                    <pre class="w-full p-4 text-sm text-green-400 font-mono">
+    <code>&lt;div class="bg-white shadow-md rounded-lg p-4"&gt;
+        &lt;div class="flex items-center"&gt;
+            &lt;div class="h-12 w-12 bg-gray-300 rounded-full flex items-center justify-center mr-4"&gt;
+                &lt;img src="https://dummyimage.com/50x50/ddd/000" alt="Profile Picture" class="h-8 w-8 rounded-full"&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h4 class="text-lg font-bold"&gt;John Doe&lt;/h4&gt;
+                &lt;p class="text-sm text-gray-600"&gt;CEO&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mt-4"&gt;
+            &lt;p class="text-sm text-gray-700"&gt;Email: john.doe@example.com&lt;/p&gt;
+            &lt;p class="text-sm text-gray-700"&gt;Phone: +1 234 567 890&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full mt-4"&gt;
+            View Details
+        &lt;/button&gt;
+&lt;/div&gt;
+    </code>
+                        </pre>
+                    </div>
             </div>
         </div>
 
@@ -175,3 +225,370 @@
         </div>
     </Carousel>
 </Slide>
+
+<style>
+    .card {
+        --docsearch-icon-stroke-width: 1.4;
+        --docsearch-highlight-color: var(--docsearch-primary-color);
+        --docsearch-modal-width: 560px;
+        --docsearch-modal-height: 600px;
+        --docsearch-searchbox-height: 56px;
+        --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
+        --docsearch-hit-height: 56px;
+        --docsearch-hit-active-color: #fff;
+        --docsearch-key-pressed-shadow: inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 1px 0 rgba(30,35,90,0.4);
+        --docsearch-spacing: 10px;
+        --docsearch-footer-height: 40px;
+        --bs-blue: #0d6efd;
+        --bs-indigo: #6610f2;
+        --bs-purple: #6f42c1;
+        --bs-pink: #d63384;
+        --bs-red: #dc3545;
+        --bs-orange: #fd7e14;
+        --bs-yellow: #ffc107;
+        --bs-green: #198754;
+        --bs-teal: #20c997;
+        --bs-cyan: #0dcaf0;
+        --bs-black: #000;
+        --bs-white: #fff;
+        --bs-gray: #6c757d;
+        --bs-gray-dark: #343a40;
+        --bs-gray-100: #f8f9fa;
+        --bs-gray-200: #e9ecef;
+        --bs-gray-300: #dee2e6;
+        --bs-gray-400: #ced4da;
+        --bs-gray-500: #adb5bd;
+        --bs-gray-600: #6c757d;
+        --bs-gray-700: #495057;
+        --bs-gray-800: #343a40;
+        --bs-gray-900: #212529;
+        --bs-primary: #0d6efd;
+        --bs-secondary: #6c757d;
+        --bs-success: #198754;
+        --bs-info: #0dcaf0;
+        --bs-warning: #ffc107;
+        --bs-danger: #dc3545;
+        --bs-light: #f8f9fa;
+        --bs-dark: #212529;
+        --bs-primary-rgb: 13,110,253;
+        --bs-secondary-rgb: 108,117,125;
+        --bs-success-rgb: 25,135,84;
+        --bs-info-rgb: 13,202,240;
+        --bs-warning-rgb: 255,193,7;
+        --bs-danger-rgb: 220,53,69;
+        --bs-light-rgb: 248,249,250;
+        --bs-dark-rgb: 33,37,41;
+        --bs-white-rgb: 255,255,255;
+        --bs-black-rgb: 0,0,0;
+        --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        --bs-body-font-family: var(--bs-font-sans-serif);
+        --bs-body-font-size: 1rem;
+        --bs-body-font-weight: 400;
+        --bs-body-line-height: 1.5;
+        --bs-link-decoration: underline;
+        --bs-border-width: 1px;
+        --bs-border-style: solid;
+        --bs-border-radius: 0.375rem;
+        --bs-border-radius-sm: 0.25rem;
+        --bs-border-radius-lg: 0.5rem;
+        --bs-border-radius-xl: 1rem;
+        --bs-border-radius-xxl: 2rem;
+        --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+        --bs-border-radius-pill: 50rem;
+        --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        --bs-focus-ring-width: 0.25rem;
+        --bs-focus-ring-opacity: 0.25;
+        --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+        color-scheme: dark;
+        --bs-body-color: #dee2e6;
+        --bs-body-color-rgb: 222,226,230;
+        --bs-body-bg: #212529;
+        --bs-body-bg-rgb: 33,37,41;
+        --bs-emphasis-color: #fff;
+        --bs-emphasis-color-rgb: 255,255,255;
+        --bs-secondary-color: rgba(222, 226, 230, 0.75);
+        --bs-secondary-color-rgb: 222,226,230;
+        --bs-secondary-bg: #343a40;
+        --bs-secondary-bg-rgb: 52,58,64;
+        --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+        --bs-tertiary-color-rgb: 222,226,230;
+        --bs-tertiary-bg: #2b3035;
+        --bs-tertiary-bg-rgb: 43,48,53;
+        --bs-primary-text-emphasis: #6ea8fe;
+        --bs-secondary-text-emphasis: #a7acb1;
+        --bs-success-text-emphasis: #75b798;
+        --bs-info-text-emphasis: #6edff6;
+        --bs-warning-text-emphasis: #ffda6a;
+        --bs-danger-text-emphasis: #ea868f;
+        --bs-light-text-emphasis: #f8f9fa;
+        --bs-dark-text-emphasis: #dee2e6;
+        --bs-primary-bg-subtle: #031633;
+        --bs-secondary-bg-subtle: #161719;
+        --bs-success-bg-subtle: #051b11;
+        --bs-info-bg-subtle: #032830;
+        --bs-warning-bg-subtle: #332701;
+        --bs-danger-bg-subtle: #2c0b0e;
+        --bs-light-bg-subtle: #343a40;
+        --bs-dark-bg-subtle: #1a1d20;
+        --bs-primary-border-subtle: #084298;
+        --bs-secondary-border-subtle: #41464b;
+        --bs-success-border-subtle: #0f5132;
+        --bs-info-border-subtle: #087990;
+        --bs-warning-border-subtle: #997404;
+        --bs-danger-border-subtle: #842029;
+        --bs-light-border-subtle: #495057;
+        --bs-dark-border-subtle: #343a40;
+        --bs-heading-color: inherit;
+        --bs-link-color: #6ea8fe;
+        --bs-link-hover-color: #8bb9fe;
+        --bs-link-color-rgb: 110,168,254;
+        --bs-link-hover-color-rgb: 139,185,254;
+        --bs-code-color: #e685b5;
+        --bs-highlight-color: #dee2e6;
+        --bs-highlight-bg: #664d03;
+        --bs-border-color: #495057;
+        --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+        --bs-form-valid-color: #75b798;
+        --bs-form-valid-border-color: #75b798;
+        --bs-form-invalid-color: #ea868f;
+        --bs-form-invalid-border-color: #ea868f;
+        --bs-breakpoint-xs: 0;
+        --bs-breakpoint-sm: 576px;
+        --bs-breakpoint-md: 768px;
+        --bs-breakpoint-lg: 992px;
+        --bs-breakpoint-xl: 1200px;
+        --bs-breakpoint-xxl: 1400px;
+        --bd-purple: #4c0bce;
+        --bd-accent: #ffe484;
+        --bd-violet-rgb: 112.520718,44.062154,249.437846;
+        --bd-accent-rgb: 255,228,132;
+        --bd-pink-rgb: 214,51,132;
+        --bd-teal-rgb: 32,201,151;
+        --bd-violet: #9461fb;
+        --bd-violet-bg: #712cf9;
+        --bd-toc-color: var(--bs-emphasis-color);
+        --bd-sidebar-link-bg: rgba(84,33,187, .5);
+        --bd-callout-link: 110,168,254;
+        --bd-callout-code-color: #e685b5;
+        --bd-pre-bg: #1b1f22;
+        --docsearch-primary-color: var(--bd-violet);
+        --docsearch-logo-color: var(--bd-violet);
+        --docsearch-text-color: #f5f6f7;
+        --docsearch-container-background: rgba(9, 10, 17, .8);
+        --docsearch-modal-background: #15172a;
+        --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
+        --docsearch-searchbox-background: #090a11;
+        --docsearch-searchbox-focus-background: #000;
+        --docsearch-hit-color: #bec3c9;
+        --docsearch-hit-shadow: none;
+        --docsearch-hit-background: #090a11;
+        --docsearch-key-gradient: linear-gradient(-26.5deg, #565872, #31355b);
+        --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, .3);
+        --docsearch-footer-background: #1e2136;
+        --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, .5), 0 -4px 8px 0 rgba(0, 0, 0, .2);
+        --docsearch-muted-color: #7f8497;
+        --base02: #3e4451;
+        --base03: #868e96;
+        --base04: #868e96;
+        --base05: #abb2bf;
+        --base06: #b6bdca;
+        --base07: #feb272;
+        --base08: #6edff6;
+        --base09: #feb272;
+        --base0A: #ffe69c;
+        --base0B: #79dfc1;
+        --base0C: #79dfc1;
+        --base0D: #6ea8fe;
+        --base0E: #c29ffa;
+        --base0F: #ea868f;
+        font-family: var(--bs-body-font-family);
+        font-size: var(--bs-body-font-size);
+        font-weight: var(--bs-body-font-weight);
+        line-height: var(--bs-body-line-height);
+        text-align: var(--bs-body-text-align);
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        --bs-gutter-y: 0;
+        --bs-gutter-x: 3rem;
+        --bd-example-padding: 1rem;
+        box-sizing: border-box;
+        --bs-card-spacer-y: 1rem;
+        --bs-card-spacer-x: 1rem;
+        --bs-card-title-spacer-y: 0.5rem;
+        --bs-card-title-color: ;
+        --bs-card-subtitle-color: ;
+        --bs-card-border-width: var(--bs-border-width);
+        --bs-card-border-color: var(--bs-border-color-translucent);
+        --bs-card-border-radius: var(--bs-border-radius);
+        --bs-card-box-shadow: ;
+        --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+        --bs-card-cap-padding-y: 0.5rem;
+        --bs-card-cap-padding-x: 1rem;
+        --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+        --bs-card-cap-color: ;
+        --bs-card-height: ;
+        --bs-card-color: ;
+        --bs-card-bg: var(--bs-body-bg);
+        --bs-card-img-overlay-padding: 1rem;
+        --bs-card-group-margin: 0.75rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: var(--bs-card-height);
+        color: var(--bs-body-color);
+        word-wrap: break-word;
+        background-color: var(--bs-card-bg);
+        background-clip: border-box;
+        border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+        border-radius: var(--bs-card-border-radius);
+        margin-bottom: 0;
+        width: 18rem;
+    }
+
+    .bd-placeholder-img.card-img-top {
+        color-scheme: dark;
+        font-family: var(--bs-body-font-family);
+        font-weight: var(--bs-body-font-weight);
+        line-height: var(--bs-body-line-height);
+        text-align: var(--bs-body-text-align);
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        color: var(--bs-body-color);
+        word-wrap: break-word;
+        height: 180;
+        box-sizing: border-box;
+        vertical-align: middle;
+        width: 100%;
+        border-top-left-radius: var(--bs-card-inner-border-radius);
+        border-top-right-radius: var(--bs-card-inner-border-radius);
+        font-size: 1.125rem;
+        user-select: none;
+        text-anchor: middle;
+    }
+    
+    .card-body {
+    color-scheme: dark;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    }
+
+    .card-title {
+    color-scheme: dark;
+    font-family: var(--bs-body-font-family);
+    text-align: var(--bs-body-text-align);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: var(--bs-card-title-color);
+    }
+
+    .card-text {
+    color-scheme: dark;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    word-wrap: break-word;
+    color: var(--bs-card-color);
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    }
+
+    .btn.btn-primary {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 3rem;
+    --bd-example-padding: 1rem;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    scroll-margin-top: 80px;
+    scroll-margin-bottom: 100px;
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0d6efd;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+    }
+</style>

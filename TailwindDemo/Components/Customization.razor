@@ -1,47 +1,73 @@
 <!-- Enhanced Carousel: Customization and Branding with Tailwind -->
-<Slide Class="h-full w-full overflow-hidden">
+<Slide Title="customization" Class="h-full w-full overflow-hidden">
     <Carousel SlideCount="4">
         <!-- Slide 1: Title Slide -->
-        <div class="carousel-slide relative flex items-center justify-center bg-default-secondary overflow-hidden">
+        <div class="carousel-slide relative flex items-center justify-center bg-default-primary text-default-bg overflow-hidden">
             <!-- Large Faint Text Background -->
-            <div class="absolute inset-0 flex items-center justify-center">
-                <h1 class="text-9xl font-extrabold text-white opacity-10">
+            <div class="pointer-events-none absolute inset-0 flex items-center justify-center text-center">
+                <h1 class="text-9xl font-extrabold opacity-10">
                     Customization & Branding
                 </h1>
             </div>
             <!-- Main Content -->
-            <div class="relative text-center text-white">
-                <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
-                    Customization and Branding with Tailwind
-                </h1>
-                <p class="text-2xl md:text-3xl font-sans font-light">
-                    Leveraging Tailwind CSS for Consistent Brand Identity
-                </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="relative text-center">
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">
+                        Customization and Branding with Tailwind
+                    </h1>
+                    <p class="text-2xl md:text-3xl font-sans font-light">
+                        Leveraging Tailwind CSS for Consistent Brand Identity
+                    </p>
+                </div>
                 <ThemePicker />
             </div>
 
             
         </div>
 
+        <!-- Slide 2: High Customizability -->
+        <div class="carousel-slide flex flex-col gap-8 items-center justify-center bg-default-bg text-default-primary">
+            <h2 class="text-default-primary">
+                High Customizability
+            </h2>
+            <div>
+                <p>
+                    Tailwind CSS comes with a powerful configuration file <i><code>tailwind.config.js</code></i> that lets you customize:
+                </p>
+                <ul class="list-disc list-inside mt-4 space-y-2 text-left">
+                    <li>Themes: Define your own color palettes, fonts, and more.</li>
+                    <li>Breakpoints: Adjust or add responsive breakpoints to suit your project's needs.</li>
+                    <li>Spacing and Sizing: Customize the spacing scale for margins, padding, etc.</li>
+                </ul>
+            </div>
+            <div class="max-h-64 w-full">
+                <pre class="bg-default-primary p-4 rounded-md w-full h-full overflow-y-scroll overflow-x-hidden">
+                <code language="text-xs javascript h-full w-full overflow-y-scroll">
+                    @ConfigScript
+                </code>
+                </pre>
+            </div>
+            <div class="justify-self-start gap-4 w-full">
+                <pre class="h-min-content w-1/2">
+                    <code>&lt;p class="text-center animate-wiggle py-2 w-32 bg-default-secondary 
+text-default-bg border-2 border-default-tertiary rounded-md"&gt;aghhhh&lt;/p&gt;</code>
+                </pre>
+                <p class="mt-4 text-center animate-wiggle py-2 w-32 bg-default-secondary text-default-bg border-2 border-default-tertiary rounded-md">aghhhh</p>
+            </div>
+        </div>
+
         <!-- Slide 2: Tailwind’s Customization Capabilities -->
-        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
-            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg text-default-primary">
+            <h2 class="mb-10 text-default-primary">
                 Tailwind’s Customization Capabilities
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <!-- Theme Configuration -->
-                <div class="flex flex-col items-center">
-                    <!-- Icon or Illustration -->
-                    <div class="mb-4">
-                        <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
-                            <span class="text-white text-3xl">🎨</span>
-                        </div>
-                    </div>
-                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-default-secondary">
                         Theme Configuration
-                    </h2>
-                    <p class="text-center">
+                    </h3>
+                    <p>
                         Tailwind CSS allows you to define custom themes, enabling you to:
                     </p>
                     <ul class="list-disc list-inside mt-4 space-y-2 text-left">
@@ -51,48 +77,57 @@
                     </ul>
                 </div>
                 <!-- Custom Utilities and Components -->
-                <div class="flex flex-col items-center">
-                    <!-- Icon or Illustration -->
-                    <div class="mb-4">
-                        <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
-                            <span class="text-white text-3xl">🔧</span>
-                        </div>
-                    </div>
-                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-default-secondary">
                         Custom Utilities and Components
-                    </h2>
-                    <p class="text-center">
+                    </h3>
+                    <p>
                         Extend Tailwind to fit your specific design needs by:
                     </p>
                     <ul class="list-disc list-inside mt-4 space-y-2 text-left">
-                        <li><strong>Adding Custom Utilities:</strong> Create your own utility classes for repetitive patterns.</li>
-                        <li><strong>Developing Components:</strong> Build reusable components with consistent styling.</li>
+                        <li><strong>Adding Custom Utilities:</strong> Create your own utility classes for repetitive patterns.
+            
+                        </li>
+                        <li class="w-full"><strong>Developing Components:</strong> Build reusable components with consistent styling.
+                        
+                            </li>
                         <li><strong>Utilizing Plugins:</strong> Leverage Tailwind's plugin system to add or modify functionalities.</li>
                     </ul>
                 </div>
             </div>
+            <div class="w-full mt-4 flex items-center justify-center">
+                                <pre class="text-sm w-full whitespace-preline">
+                                    <code>&commat;layer components {
+    .default-p-x {
+        &commat;apply lg:px-[20%] md:px-36 p-3;
+    }
+    .carousel-slide {
+        &commat;apply default-p-x h-full min-w-full;
+    }
+}</code>
+                                </pre>
+                            </div>
         </div>
 
         <!-- Slide 3: Maintaining Brand Consistency -->
-        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
+        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg text-default-primary">
             <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
                 Maintaining Brand Consistency
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <!-- Reusable Styles -->
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-start">
                     <!-- Icon or Illustration -->
                     <div class="mb-4">
                         <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                        <div class="hidden sm:flex  sm:h-24 sm:w-24 bg-default-secondary rounded-full items-center justify-center">
                             <span class="text-white text-3xl">🔄</span>
                         </div>
                     </div>
-                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
+                    <h3 class="mb-4 text-default-secondary">
                         Reusable Styles
-                    </h2>
-                    <p class="text-center">
+                    </h3>
+                    <p>
                         Use utility classes to enforce brand guidelines consistently:
                     </p>
                     <ul class="list-disc list-inside mt-4 space-y-2 text-left">
@@ -102,18 +137,18 @@
                     </ul>
                 </div>
                 <!-- Scalable Design System -->
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-start">
                     <!-- Icon or Illustration -->
                     <div class="mb-4">
                         <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
+                        <div class="hidden sm:flex sm:h-24 sm:w-24 bg-default-secondary rounded-full items-center justify-center">
                             <span class="text-white text-3xl">📈</span>
                         </div>
                     </div>
                     <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
                         Scalable Design System
                     </h2>
-                    <p class="text-center">
+                    <p>
                         Tailwind CSS helps you manage multiple branded products by:
                     </p>
                     <ul class="list-disc list-inside mt-4 space-y-2 text-left">
@@ -124,80 +159,69 @@
                 </div>
             </div>
         </div>
-
-        <!-- Slide 4: Example - Brand Integration -->
-        <div class="carousel-slide flex flex-col items-center justify-center bg-default-bg">
-            <h2 class="text-4xl md:text-5xl font-bold font-display mb-10 text-default-primary">
-                Example: Brand Integration
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-6">
-                <!-- Custom Theme Setup -->
-                <div class="flex flex-col items-center">
-                    <!-- Icon or Illustration -->
-                    <div class="mb-4">
-                        <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
-                            <span class="text-white text-3xl">⚙️</span>
-                        </div>
-                    </div>
-                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
-                        Custom Theme Setup
-                    </h2>
-                    <p class="text-center">
-                        Configure Tailwind to match your company's brand palette:
-                    </p>
-                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
-                        <li><strong>Define Colors:</strong> Set primary, secondary, and accent colors in the theme configuration.</li>
-                        <li><strong>Customize Fonts:</strong> Integrate your brand fonts by updating the <code>fontFamily</code> settings.</li>
-                        <li><strong>Adjust Components:</strong> Modify default component styles to align with brand aesthetics.</li>
-                    </ul>
-                    <p class="text-center mt-6">
-                        Example configuration in <code>tailwind.config.js</code>:
-                    </p>
-                    <pre class="bg-gray-100 p-4 rounded-lg overflow-auto text-sm md:text-base mt-2">
-<code class="language-js">
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          primary: '#1A202C',
-          secondary: '#2D3748',
-          accent: '#38B2AC',
-        },
-      },
-      fontFamily: {
-        sans: ['"YourBrandFont"', 'sans-serif'],
-      },
-    },
-  },
-  // ...
-};
-</code>
-                    </pre>
-                </div>
-                <!-- Consistent Application Across Products -->
-                <div class="flex flex-col items-center">
-                    <!-- Icon or Illustration -->
-                    <div class="mb-4">
-                        <!-- Placeholder for illustration -->
-                        <div class="w-24 h-24 bg-default-secondary rounded-full flex items-center justify-center">
-                            <span class="text-white text-3xl">🔗</span>
-                        </div>
-                    </div>
-                    <h2 class="text-3xl font-semibold font-display mb-4 text-default-secondary">
-                        Consistent Application Across Products
-                    </h2>
-                    <p class="text-center">
-                        Demonstrate unified styling across different applications:
-                    </p>
-                    <ul class="list-disc list-inside mt-4 space-y-2 text-left">
-                        <li><strong>Shared Components:</strong> Use the same components in web, mobile, and desktop applications.</li>
-                        <li><strong>Unified User Experience:</strong> Provide a consistent look and feel to enhance brand recognition.</li>
-                        <li><strong>Efficient Development:</strong> Save time by reusing code and styles across projects.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </Carousel>
 </Slide>
+
+
+@code {
+    public string ConfigScript { get; set; } = @"const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+  content: ['./Components/*.{razor,html}', './Pages/*.{razor,html}', './wwwroot/tailwind.css'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      screens: {
+        'xs': '475px',
+        ...defaultTheme.screens,
+      },
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        display: ['Poppins', 'sans-serif'],
+      },
+      colors: {
+        default: {
+          bg: 'var(--color-default-bg)',
+          primary: 'var(--color-default-primary)',
+          secondary: 'var(--color-default-secondary)',
+          tertiary: 'var(--color-default-tertiary)'
+        },
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' }
+        },
+        shrink: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.75)' }
+        },
+        slide: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(75%)' },
+          '75%': { transform: 'translateX(-75%)' }
+        },
+        fadeOut: {
+          '0%, 100%': { opacity: '50%' },
+          '50%': { opacity: '0%' }
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        shrink: 'shrink 1s ease-in-out infinite',
+        slide: 'slide 500ms ease-in-out infinite',
+        fade: 'fadeOut 3s ease-in-out infinite'
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'), 
+    require('@tailwindcss/forms'), 
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};";
+}
