@@ -19,6 +19,13 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Restore Dependencies
+        run: dotnet restore ./TailwindDemo/TailwindDemo.csproj
+
+      - name: Build
+        run: dotnet build ./TailwindDemo/TailwindDemo.csproj
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
